@@ -1,63 +1,72 @@
-# Mockup Canvas
+<!-- readme-seo: bannysukumar-professional-v4 -->
 
-Mockup Canvas is the site whose HTML title is "Mockup Canvas".
+# Telugu Earning Hub Investment Plan
 
-[![License](https://img.shields.io/github/license/Bannysukumar/investment-plan-telugu-earning-hub)](https://github.com/Bannysukumar/investment-plan-telugu-earning-hub/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/investment-plan-telugu-earning-hub)](https://github.com/Bannysukumar/investment-plan-telugu-earning-hub/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/investment-plan-telugu-earning-hub)](https://github.com/Bannysukumar/investment-plan-telugu-earning-hub/commits/main)
+This repository is a separate pnpm workspace from `Telugu-Earning-Hub`. Its ROI app document title is still Telugu-Earning-Hub, and the source layout is the investment platform under `artifacts/roi-platform` plus `artifacts/api-server`.
 
 ## Overview
 
-Mockup Canvas is the site whose HTML title is "Mockup Canvas".
+`artifacts/roi-platform/index.html` sets the page title to Telugu-Earning-Hub. The root package builds `@workspace/api-server` and `@workspace/roi-platform`. `artifacts/mockup-sandbox` is a UI prototyping tool titled Mockup Canvas. That sandbox is not the product name.
 
+Node.js `>=20.19.0` and pnpm are required. Firebase rules and `firebase.json` are in the repository. This repo has no GitHub homepage set.
 
-What is actually in the repository: `artifacts/`, `attached_assets/`, `firebase/`, `lib/`, `public/`, `scripts/`. GitHub reports the primary language as TypeScript.
+## Features
+
+The workspace contains the same kind of ROI app and API layout used for plans, investments, and withdrawals:
+
+- `artifacts/roi-platform` React client
+- `artifacts/api-server` API package
+- `artifacts/mockup-sandbox` prototyping sandbox
+- Firebase project files: `firebase.json`, `firestore.rules`, and `storage.rules`
 
 ## Tech Stack
 
 | Technology | Where it shows up |
 |---|---|
-| Firebase | Backend services used by this repository |
+| TypeScript | Root `tsconfig.json` |
+| pnpm | `pnpm-workspace.yaml` and `enforce-pnpm.cjs` |
+| React and Vite | `artifacts/roi-platform` |
+| Firebase | `firebase.json` and `.firebaserc` |
+| Node.js 20.19+ | `package.json` `engines` |
+
+## Architecture
+
+React app in `artifacts/roi-platform` → API package `artifacts/api-server` → Firebase configuration in the repository root.
 
 ## Project Structure
 
 ```text
 investment-plan-telugu-earning-hub/
-├── artifacts/
-├── attached_assets/
-├── firebase/
+├── artifacts/roi-platform/
+├── artifacts/api-server/
+├── artifacts/mockup-sandbox/
 ├── lib/
-├── public/
-├── scripts/
-├── .firebaserc
-├── .npmrc
-├── api-test.txt
-├── dev-all.mjs
-├── enforce-pnpm.cjs
 ├── firebase.json
-├── firestore.indexes.json
-├── firestore.rules
 ├── package.json
-├── pnpm-lock.yaml
-├── pnpm-workspace.yaml
-├── storage.rules
+└── pnpm-workspace.yaml
 ```
 
-## Getting Started
+## Prerequisites
+
+- Node.js 20.19.0 or newer
+- pnpm
+
+## Installation
 
 ```bash
 git clone https://github.com/Bannysukumar/investment-plan-telugu-earning-hub.git
 cd investment-plan-telugu-earning-hub
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-Scripts defined in package.json:
+## Configuration
 
-- `npm run dev` — `node ./dev-all.mjs`
-- `npm run build` — `pnpm run typecheck && pnpm --filter @workspace/api-server --filter @workspace/roi-platform run build`
+Firebase settings live in `firebase.json`, `.firebaserc`, `firestore.rules`, and `storage.rules`. Do not commit service-account keys.
 
-## Deployment
+## Usage
 
-- firebase.json is in the repository root.
+Run `pnpm dev`, then open the ROI platform dev server. The in-app document title in this repository is Telugu-Earning-Hub. For the sibling repository with its own README, see [Telugu-Earning-Hub](https://github.com/Bannysukumar/Telugu-Earning-Hub).
 
 ## Contributing
 
@@ -69,8 +78,6 @@ Licensed under MIT. See [LICENSE](LICENSE).
 
 ## Author
 
-[Banny Sukumar](https://github.com/Bannysukumar)
+Banny Sukumar
 
-- GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
-- Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
-- LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
+GitHub: https://github.com/Bannysukumar
