@@ -1,41 +1,76 @@
-<!-- readme-seo: bannysukumar -->
+# Mockup Canvas
 
-# Investment Plan Telugu Earning Hub
+Mockup Canvas is the site whose HTML title is "Mockup Canvas".
 
-**Investment Plan Telugu Earning Hub** is an open-source software project. The code is written mainly in TypeScript and maintained by [Banny Sukumar](https://github.com/Bannysukumar), a blockchain and full-stack developer.
+[![License](https://img.shields.io/github/license/Bannysukumar/investment-plan-telugu-earning-hub)](https://github.com/Bannysukumar/investment-plan-telugu-earning-hub/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/investment-plan-telugu-earning-hub)](https://github.com/Bannysukumar/investment-plan-telugu-earning-hub/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/investment-plan-telugu-earning-hub)](https://github.com/Bannysukumar/investment-plan-telugu-earning-hub/commits/main)
 
-This repository is public so developers can read the source, reuse it under the MIT License, and send improvements.
+## Overview
 
-## About this project
+Mockup Canvas is the site whose HTML title is "Mockup Canvas".
 
-Investment Plan Telugu Earning Hub lives at [`github.com/Bannysukumar/investment-plan-telugu-earning-hub`](https://github.com/Bannysukumar/investment-plan-telugu-earning-hub). Use it as a starting point for a open-source software project, or study how the TypeScript parts fit together.
 
-## Tech stack
+What is actually in the repository: `artifacts/`, `attached_assets/`, `firebase/`, `lib/`, `public/`, `scripts/`. GitHub reports the primary language as TypeScript.
 
-- Primary language: **TypeScript**
-- License: **MIT**
-- Maintainer: [Banny Sukumar](https://github.com/Bannysukumar)
+## Tech Stack
 
-## Getting started
+| Technology | Where it shows up |
+|---|---|
+| Firebase | Backend services used by this repository |
+
+## Project Structure
+
+```text
+investment-plan-telugu-earning-hub/
+├── artifacts/
+├── attached_assets/
+├── firebase/
+├── lib/
+├── public/
+├── scripts/
+├── .firebaserc
+├── .npmrc
+├── api-test.txt
+├── dev-all.mjs
+├── enforce-pnpm.cjs
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+├── package.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── storage.rules
+```
+
+## Getting Started
 
 ```bash
 git clone https://github.com/Bannysukumar/investment-plan-telugu-earning-hub.git
 cd investment-plan-telugu-earning-hub
+npm install
+npm run dev
 ```
 
-Open the project in your editor. Install dependencies only if this repo already includes a manifest such as `package.json`, `requirements.txt`, or a `.csproj` file.
+Scripts defined in package.json:
+
+- `npm run dev` — `node ./dev-all.mjs`
+- `npm run build` — `pnpm run typecheck && pnpm --filter @workspace/api-server --filter @workspace/roi-platform run build`
+
+## Deployment
+
+- firebase.json is in the repository root.
 
 ## Contributing
 
-Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before you open a pull request.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Banny Sukumar.
+Licensed under MIT. See [LICENSE](LICENSE).
 
 ## Author
+
+[Banny Sukumar](https://github.com/Bannysukumar)
 
 - GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
 - Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
 - LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
-- ORCID: [0009-0007-9766-6579](https://orcid.org/0009-0007-9766-6579)
